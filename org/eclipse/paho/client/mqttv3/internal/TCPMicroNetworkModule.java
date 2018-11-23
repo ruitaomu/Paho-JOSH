@@ -32,7 +32,7 @@ public class TCPMicroNetworkModule implements NetworkModule {
 	private SocketConnection connection;
 	private InputStream in;
 	private OutputStream out;
-	final static String className = SSLMicroNetworkModule.class.getName();
+	final static String className = TCPMicroNetworkModule.class.getName();
 	Logger log = LoggerFactory.getLogger(LoggerFactory.MQTT_CLIENT_MSG_CAT,className);
 	
 	/**

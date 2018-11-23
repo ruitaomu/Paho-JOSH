@@ -24,7 +24,7 @@ import org.eclipse.paho.client.mqttv3.internal.ConnectActionListener;
 import org.eclipse.paho.client.mqttv3.internal.ExceptionHelper;
 //import org.eclipse.paho.client.mqttv3.internal.LocalNetworkModule;
 import org.eclipse.paho.client.mqttv3.internal.NetworkModule;
-import org.eclipse.paho.client.mqttv3.internal.SSLMicroNetworkModule;
+//import org.eclipse.paho.client.mqttv3.internal.SSLMicroNetworkModule;
 import org.eclipse.paho.client.mqttv3.internal.TCPMicroNetworkModule;
 //import org.eclipse.paho.client.mqttv3.internal.security.SSLSocketFactoryFactory;
 import org.eclipse.paho.client.mqttv3.internal.wire.MqttDisconnect;
@@ -365,7 +365,8 @@ public class MqttAsyncClient implements IMqttAsyncClient { // DestinationProvide
 			port = getPort(shortAddress, 8883);
 			// SSL configuration for Java ME is much simpler, and we'll use
 			// the platform settings.
-			netModule = new SSLMicroNetworkModule(host, port);
+			//netModule = new SSLMicroNetworkModule(host, port);
+			netModule = null;
 			break;
 		case MqttConnectOptions.URI_TYPE_LOCAL :
 			throw new IllegalArgumentException(address);
